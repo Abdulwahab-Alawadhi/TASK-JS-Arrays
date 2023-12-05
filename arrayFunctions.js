@@ -9,8 +9,14 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  // Your code here
+  if (numbers.length % 2 == 0) {
+    return false;
+  } else {
+    return true;
+  }
 }
+let arrayOdd = [1, 2, 3, 4];
+console.log(isArrayLengthOdd(arrayOdd));
 
 /**
  * isArrayLengthEven(numbers):
@@ -23,9 +29,14 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  // Your code here
+  if (numbers.length % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
-
+let arrayEven = [1, 2, 3, 4];
+console.log(isArrayLengthEven(arrayEven));
 /**
  * addLailaToArray(instructors):
  * - receives array `instructors`
@@ -34,9 +45,14 @@ function isArrayLengthEven(numbers) {
  * e.g.
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
-function addLailaToArray(instructors) {
+function addLailaToArray(instructor) {
   // Your code here
+  instructor.push("Laila");
+  return instructor;
 }
+let instructors = ["Mshary", "Hassan"];
+addLailaToArray(instructors);
+console.log(addLailaToArray(["Mshary", "Hasan"]));
 
 /**
  * eliminateTeam(teams):
@@ -47,9 +63,13 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  // Your code here
+  teams.pop();
+  return teams;
 }
 
+let teams = ["Brazil", "Germany", "Italy"];
+eliminateTeam(teams);
+console.log(teams);
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
  * - receives array `fruits`
@@ -62,8 +82,17 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
+  if (fruits.length % 2 == 0) {
+    let half = fruits.length / 2;
+    return fruits.slice(half);
+  } else {
+    fruits.splice(0, fruits.length);
+    return fruits;
+  }
 }
-
+let array12 = [1, 2, 3, 4];
+// secondHalfOfArrayIfItIsEven(array12);
+console.log(secondHalfOfArrayIfItIsEven(array12));
 /**
  * youGottaCalmDown(shout):
  * - receives a string `shout`
@@ -79,5 +108,13 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .slice()
  */
 function youGottaCalmDown(shout) {
-  // Your code here
+  let index = shout.indexOf("!");
+  if (index == -1) {
+    return shout;
+  } else {
+    return shout.slice(0, index + 1);
+  }
 }
+
+let shout = "HI!!!!!!!!!!";
+console.log(youGottaCalmDown(shout));
