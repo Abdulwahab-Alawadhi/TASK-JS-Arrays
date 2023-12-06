@@ -63,13 +63,12 @@ console.log(addLailaToArray(["Mshary", "Hasan"]));
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  teams.pop();
-  return teams;
+  return teams.pop();
 }
 
 let teams = ["Brazil", "Germany", "Italy"];
-eliminateTeam(teams);
-console.log(teams);
+//eliminateTeam(teams);
+console.log(eliminateTeam(teams));
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
  * - receives array `fruits`
